@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Mission</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        electric: {
+          50: '#e6f0ff',
+          100: '#cce0ff',
+          200: '#99c2ff',
+          300: '#66a3ff',
+          400: '#3385ff',
+          500: '#0066ff',
+          600: '#0052cc',
+          700: '#003d99',
+          800: '#002966',
+          900: '#001433'
+        }
+      }
+    }
+  }
+}
+</script>
+</head>
+<body class="bg-electric-50 text-gray-800">
+
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-electric-700 to-electric-500 text-white p-4 shadow-lg transition-transform duration-300">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+    <img src="rwso__logo.jpg" class="h-10 w-10 object-contain">
+    <h1 class="text-xl font-bold">RWSO</h1>
+  </div>
+    <!--<img src="rwso__logo.jpg" alt="RWSO Logo" class="h-10 w-10 object-contain">
+    <h1 class="text-xl font-bold tracking-wide">RWSO</h1> -->
+
+    <!-- Desktop Menu -->
+    <div class="space-x-6 hidden md:flex font-medium">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#about" class="hover:underline">About</a>
+      <!--<a href="#services" class="hover:underline">Services</a> -->
+      <a href="leadership.html" class="hover:underline">Leadership</a>
+      <a href="#mission" class="hover:underline">Mission</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+      <a href="ideology.html" class="hover:underline">Ideology</a>
+    </div>
+
+    <!-- Mobile Buttons -->
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+       class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col space-y-3 mt-4 md:hidden font-medium">
+    <a href="#home" class="block">Home</a>
+    <a href="#about" class="block">About</a>
+    <a href="leadership.html" class="block">Leadership</a>
+    <a href="#mission" class="block">Mission</a>
+    <a href="#contact" class="block">Contact</a>
+    <a href="ideology.html" class="block">Ideology</a>
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const links = menu.querySelectorAll('a');
+
+  // Toggle menu
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    if (menu.style.maxHeight) {
+      menu.style.maxHeight = null;
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+    }
+  });
+
+  // Close when clicking a link
+  links.forEach(link => {
+    link.addEventListener('click', function () {
+      menu.style.maxHeight = null;
+    });
+  });
+
+  // 🔥 Close when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.style.maxHeight = null;
+    }
+  });
+});
+</script>
