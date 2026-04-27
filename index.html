@@ -30,7 +30,7 @@ tailwind.config = {
 </head>
 <body class="bg-electric-50 text-gray-800">
 
-  <nav class="bg-electric-600 text-white p-4 shadow-md sticky top-0 z-50">
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-electric-700 to-electric-500 text-white p-4 shadow-lg transition-transform duration-300">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
     <div class="flex items-center space-x-3">
     <img src="rwso__logo.jpg" class="h-10 w-10 object-contain">
@@ -319,6 +319,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>© 2026 RWSO | Rising With Sanatan Organisation</p>
   </footer>
 
+  // Hero fade on scroll
   <script>
 const hero = document.querySelector('section');
 
@@ -330,6 +331,26 @@ window.addEventListener('scroll', () => {
   if (opacity < 0) opacity = 0;
 
   hero.style.opacity = opacity;
+});
+</script>
+
+//navbar scroll hide/show
+<script>
+let lastScroll = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  let currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // scrolling down → hide
+    navbar.style.transform = "translateY(-100%)";
+  } else {
+    // scrolling up → show
+    navbar.style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
 });
 </script>
 
