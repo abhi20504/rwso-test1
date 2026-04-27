@@ -30,66 +30,45 @@ tailwind.config = {
 </head>
 <body class="bg-electric-50 text-gray-800">
 
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-electric-700 to-electric-500 text-white p-4 shadow-lg">
-  
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-electric-700 to-electric-500 text-white p-4 shadow-lg transition-transform duration-300">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
-
-    <!-- Logo -->
     <div class="flex items-center space-x-3">
-      <img src="rwso__logo.jpg" class="h-9 w-9 object-contain">
-      <h1 class="text-xl font-bold">RWSO</h1>
-    </div>
+    <img src="rwso__logo.jpg" class="h-10 w-10 object-contain">
+    <h1 class="text-xl font-bold">RWSO</h1>
+  </div>
+    <!--<img src="rwso__logo.jpg" alt="RWSO Logo" class="h-10 w-10 object-contain">
+    <h1 class="text-xl font-bold tracking-wide">RWSO</h1> -->
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex items-center space-x-6 font-medium">
-
-      <a href="index.html" class="hover:text-electric-200">Home</a>
-      <a href="#about" class="hover:text-electric-200">About</a>
-      <a href="leadership.html" class="hover:text-electric-200">Leadership</a>
-      <a href="mission.html" class="hover:text-electric-200">Mission</a>
-      <a href="#contact" class="hover:text-electric-200">Contact</a>
-      <a href="ideology.html" class="hover:text-electric-200">Ideology</a>
-
-      <!-- 🔥 OTHER DROPDOWN -->
-      <div class="relative">
-        <button id="other-btn" class="hover:text-electric-200">Other ▼</button>
-
-        <div id="other-menu" class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-lg hidden">
-          <a href="Paramilitary.html" class="block px-4 py-2 hover:bg-electric-100">Paramilitary</a>
-          <a href="#" class="block px-4 py-2 hover:bg-electric-100">Work in Progress</a>
-          <a href="#" class="block px-4 py-2 hover:bg-electric-100">More(WIP)</a>
-        </div>
-      </div>
-
+    <div class="space-x-6 hidden md:flex font-medium">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#about" class="hover:underline">About</a>
+      <!--<a href="#services" class="hover:underline">Services</a> -->
+      <a href="leadership.html" class="hover:underline">Leadership</a>
+      <a href="mission.html" class="hover:underline">Mission</a>
+      <a href="#contact" class="hover:underline">Contact(WIP)</a>
+      <a href="ideology.html" class="hover:underline">Ideology</a>
+      <a href="paramilitary.html" class="hover:underline">Paramilitary</a>
     </div>
 
-    <!-- Mobile Button -->
-    <button id="menu-btn" class="md:hidden text-2xl">☰</button>
-
+    <!-- Mobile Buttons -->
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+      ☰
+    </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col space-y-3 mt-4 md:hidden font-medium">
-
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="leadership.html">Leadership</a>
-    <a href="mission.html">Mission</a>
-    <a href="#contact">Contact</a>
-    <a href="ideology.html">Ideology</a>
-
-    <!-- Mobile Other -->
-    <div>
-      <button id="mobile-other-btn">Other ▼</button>
-      <div id="mobile-other-menu" class="hidden pl-4 mt-2 space-y-2">
-        <a href="Paramilitary.html">Paramilitary</a>
-        <a href="#" class="block px-4 py-2 hover:bg-electric-100">Work in Progress</a>
-        <a href="#" class="block px-4 py-2 hover:bg-electric-100">More(WIP)</a>
-      </div>
-    </div>
-
+  <div id="mobile-menu"
+       class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col space-y-3 mt-4 md:hidden font-medium">
+    <a href="#home" class="block">Home</a>
+    <a href="#about" class="block">About</a>
+    <a href="leadership.html" class="block">Leadership</a>
+    <a href="mission.html" class="block">Mission</a>
+    <a href="#contact" class="block">Contact(WIP)</a>
+    <a href="ideology.html" class="block">Ideology</a>
+    <a href="paramilitary.html" class="block">Paramilitary</a>
   </div>
-
+  
 </nav>
 
 <script>
@@ -122,43 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.style.maxHeight = null;
     }
   });
-});
-</script>
-
-<script>
-// Desktop dropdown
-const otherBtn = document.getElementById("other-btn");
-const otherMenu = document.getElementById("other-menu");
-
-otherBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  otherMenu.classList.toggle("hidden");
-});
-
-document.addEventListener("click", (e) => {
-  if (!otherMenu.contains(e.target) && !otherBtn.contains(e.target)) {
-    otherMenu.classList.add("hidden");
-  }
-});
-
-// Mobile menu toggle
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
-menuBtn.addEventListener("click", () => {
-  if (mobileMenu.style.maxHeight) {
-    mobileMenu.style.maxHeight = null;
-  } else {
-    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-  }
-});
-
-// Mobile "Other"
-const mobBtn = document.getElementById("mobile-other-btn");
-const mobMenu = document.getElementById("mobile-other-menu");
-
-mobBtn.addEventListener("click", () => {
-  mobMenu.classList.toggle("hidden");
 });
 </script>
 
