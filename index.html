@@ -215,6 +215,11 @@ document.addEventListener('DOMContentLoaded', function () {
   animation: zoom 10s ease-in-out infinite alternate;
 }
 </style>
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
+  <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center items-start p-1">
+    <div class="w-1 h-3 bg-white rounded animate-bounce"></div>
+  </div>
+</div>
 
 </section>
 
@@ -313,6 +318,20 @@ document.addEventListener('DOMContentLoaded', function () {
   <footer class="bg-electric-600 text-white text-center p-4">
     <p>© 2026 RWSO | Rising With Sanatan Organisation</p>
   </footer>
+
+  <script>
+const hero = document.querySelector('section');
+
+window.addEventListener('scroll', () => {
+  let scrollY = window.scrollY;
+
+  // fade out
+  let opacity = 1 - scrollY / 400;
+  if (opacity < 0) opacity = 0;
+
+  hero.style.opacity = opacity;
+});
+</script>
 
 </body>
 </html>
