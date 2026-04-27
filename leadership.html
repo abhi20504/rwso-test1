@@ -45,6 +45,39 @@
     <a href="ideology.html" class="block">Ideology</a>
   </div>
 </nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const links = menu.querySelectorAll('a');
+
+  // Toggle menu
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    if (menu.style.maxHeight) {
+      menu.style.maxHeight = null;
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+    }
+  });
+
+  // Close when clicking a link
+  links.forEach(link => {
+    link.addEventListener('click', function () {
+      menu.style.maxHeight = null;
+    });
+  });
+
+  // 🔥 Close when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.style.maxHeight = null;
+    }
+  });
+});
+</script>
   
   <!-- Leadership Section -->
   <!--<section class="py-16 px-4 max-w-5xl mx-auto">
@@ -66,7 +99,9 @@
   </section>-->
 
 
-
+<section class="py-16 px-4 max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold mb-6 text-center">Our Leadership</h2>
+    <p class="text-lg mb
   <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
   
   <div class="text-center">
@@ -116,6 +151,7 @@
 
     </ul>
   </div>
+  </section>
 
 </div>
 
