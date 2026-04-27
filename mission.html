@@ -162,6 +162,44 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 </style>
 
+<!-- Scroll Indicator -->
+<div id="scroll-indicator" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10"></div>
+<script>
+const indicator = document.getElementById("scroll-indicator");
+
+// Detect touch device
+const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+if (isTouch) {
+  // Mobile (finger swipe)
+  indicator.innerHTML = `
+    <div class="flex flex-col items-center">
+      <div class="w-4 h-4 bg-white rounded-full mb-2 animate-swipe"></div>
+      <div class="text-white text-xl animate-bounce">↓</div>
+    </div>
+  `;
+} else {
+  // Desktop (mouse)
+  indicator.innerHTML = `
+    <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center items-start p-1">
+      <div class="w-1 h-3 bg-white rounded animate-bounce"></div>
+    </div>
+  `;
+}
+</script>
+<style>
+@keyframes swipe {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(10px); opacity: 0.6; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
+.animate-swipe {
+  animation: swipe 1.5s infinite;
+}
+</style>
+
+
+
 <!-- Footer -->
   <footer class="bg-orange-600 text-white text-center p-4">
     <p>© 2026 RWSO | Our Mission</p>
