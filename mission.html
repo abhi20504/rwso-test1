@@ -28,9 +28,9 @@ tailwind.config = {
 }
 </script>
 </head>
-<body class="bg-electric-50 text-gray-800">
+<body class="bg-orange-50 text-gray-800">
 
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-electric-700 to-electric-500 text-white p-4 shadow-lg transition-transform duration-300">
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-orange-700 to-orange-500 text-white p-4 shadow-lg transition-transform duration-300">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
     <div class="flex items-center space-x-3">
     <img src="rwso__logo.jpg" class="h-10 w-10 object-contain">
@@ -41,7 +41,7 @@ tailwind.config = {
 
     <!-- Desktop Menu -->
     <div class="space-x-6 hidden md:flex font-medium">
-      <a href="#home" class="hover:underline">Home</a>
+      <a href="index.html" class="hover:underline">Home</a>
       <a href="#about" class="hover:underline">About</a>
       <!--<a href="#services" class="hover:underline">Services</a> -->
       <a href="leadership.html" class="hover:underline">Leadership</a>
@@ -59,7 +59,7 @@ tailwind.config = {
   <!-- Mobile Menu -->
   <div id="mobile-menu"
        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col space-y-3 mt-4 md:hidden font-medium">
-    <a href="#home" class="block">Home</a>
+    <a href="index.html" class="block">Home</a>
     <a href="#about" class="block">About</a>
     <a href="leadership.html" class="block">Leadership</a>
     <a href="mission.html" class="block">Mission</a>
@@ -100,3 +100,107 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
+<section class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="Militant_Hindu.jpg" 
+         class="w-full h-full object-cover animate-zoom"
+         alt="Background">
+    
+    <!-- Blue overlay -->
+    <div class="absolute inset-0 bg-orange-900/60"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 px-4">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
+      Rising With Sanatan Organisation's Mission
+    </h2>
+
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6 animate-fade-up delay-200">
+      We Hindus are the original inhabitants of Bharat, and we have been subjugated for centuries. Our mission is to reclaim our rightful place as the rulers of our land, to restore our cultural heritage, and to build a future where our children can thrive in a society that honors our traditions and values. We seek to unite all Hindus under a common banner, to resist foreign influences, and to create a strong, prosperous, and self-reliant nation that reflects the glory of our ancient civilization.
+    </p>
+
+    <!--<button class="bg-electric-600 hover:bg-electric-700 px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition animate-fade-up delay-400">
+      Join the Movement
+    </button> --> 
+
+  </div>
+
+  <style>
+/* Fade + slide up */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Delay helpers */
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Slow zoom background */
+@keyframes zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.animate-zoom {
+  animation: zoom 10s ease-in-out infinite alternate;
+}
+</style>
+
+<!-- Footer -->
+  <footer class="bg-orange-600 text-white text-center p-4">
+    <p>© 2026 RWSO | Our Mission</p>
+  </footer>
+
+  <!-- Hero fade on scroll -->
+  <script>
+const hero = document.querySelector('section');
+
+window.addEventListener('scroll', () => {
+  let scrollY = window.scrollY;
+
+  // fade out
+  let opacity = 1 - scrollY / 400;
+  if (opacity < 0) opacity = 0;
+
+  hero.style.opacity = opacity;
+});
+</script>
+
+<!-- Navbar scroll hide/show -->
+<script>
+let lastScroll = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  let currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // scrolling down → hide
+    navbar.style.transform = "translateY(-100%)";
+  } else {
+    // scrolling up → show
+    navbar.style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
+});
+</script>
+
+</body>
+</html>
