@@ -74,6 +74,39 @@ document.addEventListener('DOMContentLoaded', function () {
   const menu = document.getElementById('mobile-menu');
   const links = menu.querySelectorAll('a');
 
+  // Toggle menu
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    if (menu.style.maxHeight) {
+      menu.style.maxHeight = null;
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+    }
+  });
+
+  // Close when clicking a link
+  links.forEach(link => {
+    link.addEventListener('click', function () {
+      menu.style.maxHeight = null;
+    });
+  });
+
+  // 🔥 Close when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.style.maxHeight = null;
+    }
+  });
+});
+</script>
+
+<!--<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const links = menu.querySelectorAll('a');
+
   btn.addEventListener('click', function () {
     if (menu.style.maxHeight) {
       menu.style.maxHeight = null;
@@ -82,14 +115,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Auto close when clicking a link
   links.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', function () {
       menu.style.maxHeight = null;
-    });
-  });
+  }); });
 });
-</script>
+
+</script> -->
+
+
 
   <!-- Hero Section -->
   <section id="home" class="text-center py-16 bg-electric-100">
