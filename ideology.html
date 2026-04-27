@@ -4,16 +4,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhinandanism - RWSO</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        electric: {
+          50: '#e6f0ff',
+          100: '#cce0ff',
+          200: '#99c2ff',
+          300: '#66a3ff',
+          400: '#3385ff',
+          500: '#0066ff',
+          600: '#0052cc',
+          700: '#003d99',
+          800: '#002966',
+          900: '#001433'
+        }
+      }
+    }
+  }
+}
+</script>
 </head>
 <body class="bg-blue-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-blue-600 text-white p-4">
+  <!--<nav class="bg-blue-600 text-white p-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <h1 class="text-xl font-bold">RWSO</h1>
       <a href="index.html"> Back to Home Page</a>
     </div>
-  </nav>
+  </nav>-->
+
+  <nav class="bg-gradient-to-r from-electric-700 to-electric-500 text-white p-4 shadow-lg">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+    <!-- Logo + Name -->
+    <div class="flex items-center space-x-3">
+      <img src="rwso__logo.jpg" class="h-10 w-10 object-contain">
+      <h1 class="text-xl font-bold">RWSO</h1>
+    </div>
+
+    <!-- Links -->
+    <div class="space-x-6 hidden md:flex font-medium">
+      <a href="index.html" class="hover:text-electric-200 transition">Home</a>
+      <a href="leadership.html" class="hover:text-electric-200 transition">Leadership</a>
+    </div>
+
+  </div>
+</nav>
+<section class="relative text-center py-20 text-white">
+
+  <!-- Background gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-electric-700 via-electric-500 to-electric-300"></div>
+
+  <!-- Optional logo -->
+  <div class="relative z-10">
+    <img src="rwso__logo.jpg" class="mx-auto mb-6 w-24 h-24 object-contain drop-shadow-lg">
+
+    <h2 class="text-4xl font-bold mb-4">
+      Abhinandanism
+    </h2>
+
+    <p class="text-lg max-w-2xl mx-auto">
+      A unified ideological framework rooted in Sanatan thought, discipline, and civilizational clarity.
+    </p>
+  </div>
+
+</section>
 
   <!-- Ideology Section -->
   <section class="py-16 px-4 max-w-5xl mx-auto">
