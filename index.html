@@ -215,11 +215,44 @@ document.addEventListener('DOMContentLoaded', function () {
   animation: zoom 10s ease-in-out infinite alternate;
 }
 </style>
+<!-- Scroll Indicator -->
 <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
   <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center items-start p-1">
     <div class="w-1 h-3 bg-white rounded animate-bounce"></div>
   </div>
 </div>
+
+<!-- Mobile Swipe Indicator -->
+<div class="flex md:hidden absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex-col items-center">
+
+  <!-- Finger Dot -->
+  <div class="w-4 h-4 bg-white rounded-full mb-2 animate-swipe"></div>
+
+  <!-- Arrow -->
+  <div class="text-white text-xl animate-bounce">↓</div>
+
+</div>
+
+<style>
+@keyframes swipe {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.animate-swipe {
+  animation: swipe 1.5s infinite;
+}
+</style>
 
 </section>
 
