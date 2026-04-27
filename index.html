@@ -126,10 +126,97 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   <!-- Hero Section -->
-  <section id="home" class="text-center py-16 bg-electric-100">
+  <!-- <section id="home" class="text-center py-16 bg-electric-100">
     <h2 class="text-4xl font-bold mb-4">Rising With Sanatan Organisation</h2>
     <p class="text-lg max-w-2xl mx-auto">A Hindu should not beg for Justice here and there, when RWSO is Here!</p>
-  </section>
+  </section> -->
+
+  <!-- <section class="relative text-center py-20 text-white"> -->
+
+  <!-- Background Image -->
+  <!--<div class="absolute inset-0">
+    <img src="hero_bg.png" 
+         class="w-full h-full object-cover" 
+         alt="Background">
+    
+    //Dark overlay --> 
+    <!--<div class="absolute inset-0 bg-orange/50"></div>
+  </div> -->
+
+  <!-- Content -->
+  <!--<div class="relative z-10">
+    <h2 class="text-4xl font-bold mb-4">
+      Rising With Sanatan Organisation
+    </h2>
+    <p class="text-lg max-w-2xl mx-auto">
+      A Hindu should not beg for Justice here and there, when RWSO is Here!
+    </p>
+  </div> -->
+
+<!--</section> -->
+
+<section class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="hero_bg.png" 
+         class="w-full h-full object-cover animate-zoom"
+         alt="Background">
+    
+    <!-- Blue overlay -->
+    <div class="absolute inset-0 bg-blue-900/60"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 px-4">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
+      Rising With Sanatan Organisation
+    </h2>
+
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6 animate-fade-up delay-200">
+      A Hindu should not beg for Justice here and there, when RWSO is Here!
+    </p>
+
+    <button class="bg-electric-600 hover:bg-electric-700 px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition animate-fade-up delay-400">
+      Join the Movement
+    </button>
+
+  </div>
+
+  <style>
+/* Fade + slide up */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Delay helpers */
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Slow zoom background */
+@keyframes zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.animate-zoom {
+  animation: zoom 10s ease-in-out infinite alternate;
+}
+</style>
+
+</section>
 
   <!-- About -->
   <section id="about" class="py-12 px-4 max-w-5xl mx-auto">
