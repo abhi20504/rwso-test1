@@ -8,13 +8,44 @@
 <body class="bg-orange-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-orange-600 text-white p-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">RWSO</h1>
-      <a href="index.html"> Back to Home Page</a>
-    </div>
-  </nav>
+   <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-orange-700 to-orange-500 text-white p-4 shadow-lg transition-transform duration-300">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+    <img src="rwso__logo.jpg" class="h-10 w-10 object-contain">
+    <h1 class="text-xl font-bold">RWSO</h1>
+  </div>
+    <!--<img src="rwso__logo.jpg" alt="RWSO Logo" class="h-10 w-10 object-contain">
+    <h1 class="text-xl font-bold tracking-wide">RWSO</h1> -->
 
+    <!-- Desktop Menu -->
+    <div class="space-x-6 hidden md:flex font-medium">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="#about" class="hover:underline">About</a>
+      <!--<a href="#services" class="hover:underline">Services</a> -->
+      <a href="leadership.html" class="hover:underline">Leadership</a>
+      <a href="mission.html" class="hover:underline">Mission</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+      <a href="ideology.html" class="hover:underline">Ideology</a>
+    </div>
+
+    <!-- Mobile Buttons -->
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+       class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col space-y-3 mt-4 md:hidden font-medium">
+    <a href="index.html" class="block">Home</a>
+    <a href="#about" class="block">About</a>
+    <a href="leadership.html" class="block">Leadership</a>
+    <a href="mission.html" class="block">Mission</a>
+    <a href="#contact" class="block">Contact</a>
+    <a href="ideology.html" class="block">Ideology</a>
+  </div>
+</nav>
+  
   <!-- Leadership Section -->
   <!--<section class="py-16 px-4 max-w-5xl mx-auto">
     <h2 class="text-4xl font-bold mb-6">Our Leadership</h2>
