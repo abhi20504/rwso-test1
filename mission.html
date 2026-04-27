@@ -28,7 +28,7 @@ tailwind.config = {
 }
 </script>
 </head>
-<body class="bg-orange-50 text-gray-800">
+<body class="bg-electric-50 text-gray-800">
 
   <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-orange-700 to-orange-500 text-white p-4 shadow-lg transition-transform duration-300">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -101,6 +101,60 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<!--<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const links = menu.querySelectorAll('a');
+
+  btn.addEventListener('click', function () {
+    if (menu.style.maxHeight) {
+      menu.style.maxHeight = null;
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+    }
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', function () {
+      menu.style.maxHeight = null;
+  }); });
+});
+
+</script> -->
+
+
+
+  <!-- Hero Section -->
+  <!-- <section id="home" class="text-center py-16 bg-electric-100">
+    <h2 class="text-4xl font-bold mb-4">Rising With Sanatan Organisation</h2>
+    <p class="text-lg max-w-2xl mx-auto">A Hindu should not beg for Justice here and there, when RWSO is Here!</p>
+  </section> -->
+
+  <!-- <section class="relative text-center py-20 text-white"> -->
+
+  <!-- Background Image -->
+  <!--<div class="absolute inset-0">
+    <img src="hero_bg.png" 
+         class="w-full h-full object-cover" 
+         alt="Background">
+    
+    //Dark overlay --> 
+    <!--<div class="absolute inset-0 bg-orange/50"></div>
+  </div> -->
+
+  <!-- Content -->
+  <!--<div class="relative z-10">
+    <h2 class="text-4xl font-bold mb-4">
+      Rising With Sanatan Organisation
+    </h2>
+    <p class="text-lg max-w-2xl mx-auto">
+      A Hindu should not beg for Justice here and there, when RWSO is Here!
+    </p>
+  </div> -->
+
+<!--</section> -->
+
 <section class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
 
   <!-- Background Image -->
@@ -117,11 +171,11 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="relative z-10 px-4">
 
     <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
-      Rising With Sanatan Organisation's Mission
+       Mission of Rising With Sanatan Organisation
     </h2>
 
     <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6 animate-fade-up delay-200">
-      We Hindus are the original inhabitants of Bharat, and we have been subjugated for centuries. Our mission is to reclaim our rightful place as the rulers of our land, to restore our cultural heritage, and to build a future where our children can thrive in a society that honors our traditions and values. We seek to unite all Hindus under a common banner, to resist foreign influences, and to create a strong, prosperous, and self-reliant nation that reflects the glory of our ancient civilization.
+      To Fight for Justice of Sanatan Dharma and Women's safety and to Serve Society through Cultural Awareness, Youth Engagement, and Outreach Programs.
     </p>
 
     <!--<button class="bg-electric-600 hover:bg-electric-700 px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition animate-fade-up delay-400">
@@ -161,6 +215,24 @@ document.addEventListener('DOMContentLoaded', function () {
   animation: zoom 10s ease-in-out infinite alternate;
 }
 </style>
+<!-- Desktop Mouse -->
+<!--<div class="hidden md:flex absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
+  <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center items-start p-1">
+    <div class="w-1 h-3 bg-white rounded animate-bounce"></div>
+  </div>
+</div> -->
+
+
+<!-- Mobile Swipe Indicator -->
+<!--<div class="flex md:hidden absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex-col items-center">
+
+  <!-- Finger Dot -->
+  <!--<div class="w-4 h-4 bg-white rounded-full mb-2 animate-swipe"></div>-->
+
+  <!-- Arrow -->
+  <!-- <div class="text-white text-xl animate-bounce">↓</div> -->
+
+<!--</div>-->
 
 <!-- Scroll Indicator -->
 <div id="scroll-indicator" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10"></div>
@@ -198,11 +270,123 @@ if (isTouch) {
 }
 </style>
 
+<!--<style>
+@keyframes swipe {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
 
+.animate-swipe {
+  animation: swipe 1.5s infinite;
+}
+</style>-->
 
-<!-- Footer -->
-  <footer class="bg-orange-600 text-white text-center p-4">
-    <p>© 2026 RWSO | Our Mission</p>
+</section>
+
+  <!-- About -->
+  <section id="about" class="py-12 px-4 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4">About Us</h3>
+    <p>We are a cultural community based legal aid organisation, charitable trust and group of NGOS</p>
+  </section>
+
+  <!-- Services -->
+  <!-- <section id="services" class="py-12 px-4 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4">Our Services</h3>
+    <p>We provide legal aid and support to individuals and communities in need.</p>
+  </section> -->
+
+  <!-- Leadership -->
+  <!-- <section id="leadership" class="py-12 px-4 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4">Our Leader</h3>
+    <p>Name: Aryan Choudhary</p>
+  </section> -->
+
+  <!-- Mission -->
+  <section id="mission" class="py-12 px-4 bg-electric-100">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Promote cultural awareness</li>
+        <li>Encourage youth participation</li>
+        <li>Organize events and campaigns</li>
+        <li>Serve society through outreach programs</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 px-4 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold mb-6">Connect With Us</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/risingwithsanatan/" target="_blank" class="flex items-center space-x-3 p-4 border rounded-lg hover:bg-electric-200 transition">
+        <svg class="w-6 h-6" viewBox="0 0 24 24">
+          <defs>
+            <linearGradient id="ig" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f58529"/>
+              <stop offset="50%" stop-color="#dd2a7b"/>
+              <stop offset="100%" stop-color="#8134af"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#ig)" d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+        </svg>
+        <span class="font-medium">Instagram</span>
+      </a>
+
+      <!-- Twitter / X  -->
+      <a href="https://x.com/rwsohindu" target="_blank" class="flex items-center space-x-3 p-4 border rounded-lg hover:bg-electric-200 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M18.244 2H21l-6.56 7.5L22 22h-6.828l-5.35-6.984L3.5 22H1l7.02-8.02L2 2h6.828l4.85 6.36L18.244 2z"/></svg>
+        <span class="font-medium">Twitter / X</span>
+      </a>
+
+      <!-- YouTube  -->
+      <a href="https://www.youtube.com/@risingwithsanatan?sub_confirmation=1" target="_blank" class="flex items-center space-x-3 p-4 border rounded-lg hover:bg-electric-200 transition">
+        <svg class="w-6 h-6" viewBox="0 0 24 24">
+          <path fill="#FF0000" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31_31_0_0_0_24_12a31_31_0_0_0-.5-5.8z"/>
+          <path fill="#fff" d="M9.5 15.5v-7l6 3.5-6 3.5z"/>
+        </svg>
+        <span class="font-medium">YouTube</span>
+      </a>
+
+      <!-- Facebook  -->
+      <a href="https://www.facebook.com/profile.php?id=61569944529013" target="_blank" class="flex items-center space-x-3 p-4 border rounded-lg hover:bg-electric-200 transition">
+        <svg class="w-6 h-6" viewBox="0 0 24 24">
+          <path fill="#1877F2" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/>
+        </svg>
+        <span class="font-medium">Facebook</span>
+      </a>
+
+      <!-- WhatsApp -->
+      <!-- <a href="#" target="_blank" class="flex items-center space-x-3 p-4 border rounded-lg hover:bg-electric-200 transition">
+        <svg class="w-6 h-6" viewBox="0 0 24 24">
+          <path fill="#25D366" d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12S18.6 0 12 0z"/>
+          <path fill="#fff" d="M17.5 14.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-1-2.2-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.7 5.9 5 .8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3z"/>
+        </svg>
+        <span class="font-medium">WhatsApp</span>
+      </a> -->
+
+      <!-- Email (optional) -->
+      <a href="mailto:risingwithsanatanoffice@gmail.com" class="flex items-center space-x-3 p-4 border rounded-lg hover:bg-electric-200 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 13.5 0 6.75V18a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6.75L12 13.5zM12 11 24 4.25V4a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v.25L12 11z"/></svg>
+        <span class="font-medium">Email</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-electric-600 text-white text-center p-4">
+    <p>© 2026 RWSO | Rising With Sanatan Organisation</p>
   </footer>
 
   <!-- Hero fade on scroll -->
